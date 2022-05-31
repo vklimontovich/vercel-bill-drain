@@ -1,4 +1,4 @@
-import type {GetStaticProps, GetStaticPropsContext, NextPage} from 'next'
+import type {GetServerSideProps, GetStaticProps, GetStaticPropsContext, NextPage} from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
@@ -12,7 +12,7 @@ const Home: NextPage = () => {
 }
 
 
-export const getStaticProps: GetStaticProps = async (context: GetStaticPropsContext) => {
+export const getServerSideProps: GetServerSideProps = async (context: GetStaticPropsContext) => {
   return {
     redirect: {
       destination: '/api/redirect',
