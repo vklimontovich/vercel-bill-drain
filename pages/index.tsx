@@ -16,7 +16,7 @@ export const getServerSideProps: GetServerSideProps = async (context: GetStaticP
   return {
     redirect: {
       destination: '/api/redirect',
-      permanent: false
+      permanent: true
     }
   }
 }
