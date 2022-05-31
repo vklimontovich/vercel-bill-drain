@@ -9,7 +9,7 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  console.log(`${req.method} ${req.url}. Headers: ${JSON.stringify(req.headers)}`)
+  console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}. Headers: ${JSON.stringify(req.headers)}`)
   if (req.query?.step === '0') {
     res.redirect("/api/redirect?step=1")
   } else {
